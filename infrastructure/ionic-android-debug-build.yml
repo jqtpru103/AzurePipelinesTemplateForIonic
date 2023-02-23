@@ -3,9 +3,10 @@ steps:
     displayName: 'Install Ionic CLI'
 
   - task: Npm@1
+    variables:
+      projectName: 'Test'
     inputs:
       workingDir: '$(Build.SourcesDirectory)/$(projectName)'
-      command: print $(projectname)
       command: install
     displayName: 'NPM Install'
 
